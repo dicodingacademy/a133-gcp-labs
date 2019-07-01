@@ -1,0 +1,23 @@
+{
+  "name": "gae-hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LittleFireflies/gae-hello-world.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LittleFireflies/gae-hello-world/issues"
+  },
+  "homepage": "https://github.com/LittleFireflies/gae-hello-world#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

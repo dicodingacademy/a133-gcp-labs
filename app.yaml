@@ -1,0 +1,6 @@
+runtime: php72
+service: webapp
+
+handlers:
+  - url: /assets
+    static_dir: assets

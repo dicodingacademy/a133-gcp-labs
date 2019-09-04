@@ -16,8 +16,68 @@ const connection = mysql.createConnection({
     password: '[DATABASE PASSWORD]'
 })
 
+router.get("/dashboard", (req, res) => {
+    const query = "select (select count(*) from records where month(records.date) = month(now()) AND year(records.date) = year(now())) as month_records, (select sum(amount) from records) as total_amount;"
+    connection.query(query, (err, rows, field) => {
+        if(err) {
+            res.status(500).send({message: err.sqlMessage})
+        } else {
+            res.json(rows)
+        }
+    })
+})
+
 router.get("/getrecords", (req, res) => {
     const query = "SELECT * FROM records"
+    connection.query(query, (err, rows, field) => {
+        if(err) {
+            res.status(500).send({message: err.sqlMessage})
+        } else {
+            res.json(rows)
+        }
+    })
+})
+
+router.get("/getlast10records", (req, res) => {
+    const query = "SELECT * FROM records ORDER BY date DESC LIMIT 10"
+    connection.query(query, (err, rows, field) => {
+        if(err) {
+            res.status(500).send({message: err.sqlMessage})
+        } else {
+            res.json(rows)
+        }
+    })
+})
+
+router.get("/gettopexpense", (req, res) => {
+    const query = "SELECT * FROM records WHERE amount < 0 ORDER BY amount ASC LIMIT 10"
+    connection.query(query, (err, rows, field) => {
+        if(err) {
+            res.status(500).send({message: err.sqlMessage})
+        } else {
+            res.json(rows)
+        }
+    })
+})
+
+router.get("/getrecord/:id", (req, res) => {
+    const id = req.params.id
+
+    const query = "SELECT * FROM records WHERE id = ?"
+    connection.query(query, [id], (err, rows, field) => {
+        if(err) {
+            res.status(500).send({message: err.sqlMessage})
+        } else {
+            res.json(rows)
+        }
+    })
+})
+
+router.get("/searchrecords", (req, res) => {
+    const s = req.query.s;
+
+    console.log(s)
+    const query = "SELECT * FROM records WHERE name LIKE '%" + s + "%' or notes LIKE '%" + s + "%'"
     connection.query(query, (err, rows, field) => {
         if(err) {
             res.status(500).send({message: err.sqlMessage})

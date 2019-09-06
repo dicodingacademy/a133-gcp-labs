@@ -9,6 +9,7 @@ const multer = Multer({
     fileSize: 5 * 1024 * 1024
 })
 
+// TODO: Sesuaikan konfigurasi database
 const connection = mysql.createConnection({
     host: '[SQL HOSTNAME]',
     user: '[SQL USER]',

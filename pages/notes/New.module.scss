@@ -1,0 +1,80 @@
+.new_page {
+
+  .new_page__content {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 900px;
+    margin: 120px auto 0 auto;
+
+    .new_page__header {
+      margin-bottom: 16px;
+
+      .new_page__title {
+        border: 0;
+        font-weight: 600;
+        font-size: 64px;
+      }
+
+      .new_page__tags {
+        margin-top: 8px;
+        border: 0;
+        padding: 8px 0;
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+
+    .new_page__body {
+      min-height: 400px;
+      font-size: 24px;
+      padding: 16px 0;
+    }
+
+    .new_page__body[contentEditable="true"]:empty:not(:focus):before {
+      content: attr(placeholder);
+      color: #929292;
+    }
+
+    .new_page__body[contentEditable="true"]:empty:before {
+      content: attr(placeholder);
+      color: #929292;
+    }
+
+    .new_page__action {
+      margin-top: 16px;
+
+      .update_button, .delete_button {
+        padding: 12px 8px;
+        background-color: transparent;
+        color: black;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .delete_button {
+        color: #ef5959;
+        margin-left: 16px;
+      }
+
+      .update_button:disabled {
+        color: #929292;
+      }
+    }
+  }
+
+  input, button {
+    border: 0;
+    font-family: 'Inter', sans-serif;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  input:focus, div:focus{
+    outline: none;
+  }
+}

@@ -1,0 +1,23 @@
+.announce_bar {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 10px 0;
+
+  p {
+    text-align: center;
+
+    a {
+      color: white;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+}

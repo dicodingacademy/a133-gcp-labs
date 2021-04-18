@@ -1,0 +1,24 @@
+.note_list {
+  flex: 1;
+  padding: 16px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+.empty {
+  text-align: center;
+  padding: 64px 0;
+
+  p {
+    font-weight: 600;
+    font-size: 20px;
+  }
+}
+
+
+@media screen and (min-width: 600px) {
+  .note_list {
+    grid-template-columns: 1fr 1fr;
+  }
+}

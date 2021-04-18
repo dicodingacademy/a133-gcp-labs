@@ -1,0 +1,26 @@
+.floating {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+}
+
+.floating_button {
+  padding: 16px;
+  background: black;
+  border: 0;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 18px;
+  }
+
+  span {
+    margin-left: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+  }
+}

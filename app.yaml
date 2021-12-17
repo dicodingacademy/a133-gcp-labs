@@ -1,5 +1,5 @@
 runtime: php72
-service: webapp
+service: frontend
 
 handlers:
   - url: /assets

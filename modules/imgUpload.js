@@ -8,12 +8,12 @@ const pathKey = path.resolve('./serviceaccountkey.json')
 
 // TODO: Sesuaikan konfigurasi Storage
 const gcs = new Storage({
-    projectId: 'ancient-sunspot-328301',
+    projectId: 'project_id_Anda',
     keyFilename: pathKey
 })
 
 // TODO: Tambahkan nama bucket yang digunakan
-const bucketName = 'money-tracker-bucket123'
+const bucketName = 'nama_GCS_bucket_Anda'
 const bucket = gcs.bucket(bucketName)
 
 function getPublicUrl(filename) {

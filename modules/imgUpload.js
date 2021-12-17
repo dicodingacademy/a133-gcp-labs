@@ -2,15 +2,18 @@
 const {Storage} = require('@google-cloud/storage')
 const fs = require('fs')
 const dateFormat = require('dateformat')
+const path = require('path');
+
+const pathKey = path.resolve('./serviceaccountkey.json')
 
 // TODO: Sesuaikan konfigurasi Storage
 const gcs = new Storage({
-    projectId: '[PROJECT ID]',
-    keyFilename: '[PATH TO SERVICE ACCOUNT KEY JSON]' //example: ./serviceaccountkey.json (file ini bisa didapatkan ketika membuat service account)
+    projectId: 'ancient-sunspot-328301',
+    keyFilename: pathKey
 })
 
 // TODO: Tambahkan nama bucket yang digunakan
-const bucketName = '[BUCKET NAME]'
+const bucketName = 'money-tracker-bucket123'
 const bucket = gcs.bucket(bucketName)
 
 function getPublicUrl(filename) {

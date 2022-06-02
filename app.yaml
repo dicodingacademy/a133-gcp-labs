@@ -1,4 +1,4 @@
-runtime: php72
+runtime: php74
 service: frontend
 
 handlers:

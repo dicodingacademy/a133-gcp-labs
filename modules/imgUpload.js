@@ -8,12 +8,12 @@ const pathKey = path.resolve('./serviceaccountkey.json')
 
 // TODO: Sesuaikan konfigurasi Storage
 const gcs = new Storage({
-    projectId: 'project_id_Anda',
+    projectId: 'pelagic-force-350606',
     keyFilename: pathKey
 })
 
 // TODO: Tambahkan nama bucket yang digunakan
-const bucketName = 'nama_GCS_bucket_Anda'
+const bucketName = 'moneytrack'
 const bucket = gcs.bucket(bucketName)
 
 function getPublicUrl(filename) {

@@ -13,7 +13,7 @@ const gcs = new Storage({
 })
 
 // TODO: Tambahkan nama bucket yang digunakan
-const bucketName = 'moneytrack'
+const bucketName = 'pelagic-force-350606.appspot.com'
 const bucket = gcs.bucket(bucketName)
 
 function getPublicUrl(filename) {

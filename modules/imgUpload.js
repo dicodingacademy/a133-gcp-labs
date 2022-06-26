@@ -8,12 +8,12 @@ const pathKey = path.resolve('./serviceaccountkey.json')
 
 // TODO: Sesuaikan konfigurasi Storage
 const gcs = new Storage({
-    projectId: 'pelagic-force-350606',
+    projectId: 'submission-mgce-adrieadmira',
     keyFilename: pathKey
 })
 
 // TODO: Tambahkan nama bucket yang digunakan
-const bucketName = 'pelagic-force-350606.appspot.com'
+const bucketName = 'moneyadmira'
 const bucket = gcs.bucket(bucketName)
 
 function getPublicUrl(filename) {

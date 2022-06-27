@@ -13,7 +13,7 @@ const gcs = new Storage({
 })
 
 // TODO: Tambahkan nama bucket yang digunakan
-const bucketName = 'moneyadmira'
+const bucketName = 'submission-mgce-adrieadmira.appspot.com'
 const bucket = gcs.bucket(bucketName)
 
 function getPublicUrl(filename) {

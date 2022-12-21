@@ -1,3 +1,3 @@
-# Belajar Membuat Aplikasi Back-End untuk Pemula
+# Menjadi Google Cloud Engineer
 
-Source code terdapat pada masing-masing branch
+Notes API (backend) untuk materi Cloud Run di kelas Menjadi Google Cloud Engineer
